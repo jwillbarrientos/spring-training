@@ -32,7 +32,7 @@ public class RewardNetworkImplTests {
 	 */
 	private RewardNetworkImpl rewardNetwork;
 
-	// TODO-09: Review the test setup
+	// TOD0-09: Review the test setup
 	@BeforeEach
 	public void setUp() throws Exception {
 		// Create stubs to facilitate fast in-memory testing with
@@ -45,7 +45,7 @@ public class RewardNetworkImplTests {
 		rewardNetwork = new RewardNetworkImpl(accountRepo, restaurantRepo, rewardRepo);
 	}
 
-	// TODO-10: Test RewardNetworkImpl class
+	// TOD0-10: Test RewardNetworkImpl class
 	// - Remove the @Disabled annotation below.
 	// - Run this JUnit test. Verify it passes.
 	@Test
