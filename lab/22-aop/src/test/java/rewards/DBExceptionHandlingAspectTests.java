@@ -9,6 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import rewards.CaptureSystemOutput.OutputCapture;
 import rewards.internal.account.AccountRepository;
 import rewards.internal.aspects.DBExceptionHandlingAspect;
+import rewards.internal.aspects.LoggingAspect;
 import rewards.internal.exception.RewardDataAccessException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -22,6 +23,8 @@ public class DBExceptionHandlingAspectTests {
 
     @Autowired
     AccountRepository repository;
+    @Autowired
+    private LoggingAspect loggingAspect;
 
     @Test
     @CaptureSystemOutput
@@ -35,7 +38,7 @@ public class DBExceptionHandlingAspectTests {
             repository.findByCreditCard("1234123412341234");
         });
 
-        // TODO-12: (Optional) Validate our AOP is working.
+        // TOD0-12: (Optional) Validate our AOP is working.
         //
         // - An error message should now be logged to the console as a warning
         // - Save all your work and run this test - it should pass with a warning
