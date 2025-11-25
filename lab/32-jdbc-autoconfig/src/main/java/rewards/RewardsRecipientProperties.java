@@ -1,6 +1,6 @@
 package rewards;
 
-// TODO-06 : Capture properties into a class using @ConfigurationProperties
+// TOD0-06 : Capture properties into a class using @ConfigurationProperties
 // - Note that application.properties file already contains the following properties
 //
 //    rewards.recipient.name=John Doe
@@ -19,6 +19,47 @@ package rewards;
 //   (3) Annotate this class with @Component
 // - Implement a new command line runner that displays the name of the rewards
 //   recipient when the application gets started
-public class RewardsRecipientProperties {
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@ConfigurationProperties(prefix = "rewards.recipient")
+@Component
+public class RewardsRecipientProperties {
+    private String name;
+    private int age;
+    private String gender;
+    private String hobby;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
 }
