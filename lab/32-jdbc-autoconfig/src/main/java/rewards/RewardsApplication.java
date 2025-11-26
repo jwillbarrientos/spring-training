@@ -41,7 +41,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 // TOD0-12 (Optional) : Look in application.properties for the next step.
 
-// TODO-13 (Optional) : Follow the instruction in the lab document.
+// TOD0-13 (Optional) : Follow the instruction in the lab document.
 //           The section titled "Build and Run using Command Line tools".
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
